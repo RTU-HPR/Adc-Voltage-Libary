@@ -2,8 +2,6 @@
   This library is used for the to read voltage from a voltage divider circuit.
 */
 #pragma once
-#ifdef ANALOG_VOLTAGE_READER_ENABLE
-
 #include "Sensor_wrapper.h"
 
 class AdcVoltage : public Sensor_Wrapper
@@ -54,5 +52,3 @@ public:
    */
   bool read(AdcVoltage_Data &data);
 };
-
-#endif

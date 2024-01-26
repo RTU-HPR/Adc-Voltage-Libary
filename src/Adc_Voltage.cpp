@@ -1,4 +1,3 @@
-#ifdef ANALOG_VOLTAGE_READER_ENABLE
 #include "Adc_Voltage.h"
 
 AdcVoltage::AdcVoltage(void (*error_function)(String), String sensor_name) : Sensor_Wrapper(sensor_name, error_function)
@@ -28,5 +27,3 @@ bool AdcVoltage::read(AdcVoltage_Data &data)
   data.voltage = analogRead(_pin) * _conversion_factor;
   return true;
 }
-
-#endif
